@@ -20,7 +20,7 @@ class App extends StatelessWidget {
           centerTitle: false,
           leading: Icon(Icons.videocam),
           title: const Text(
-              'KBOYのFlutter大学'
+              '超かっこいいKBOYのFlutter大学'
           ),
           actions: <Widget>[
             SizedBox(
