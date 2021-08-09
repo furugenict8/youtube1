@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:youtube1app/video_detail_page.dart';
 
-void main(){
+void main() {
   runApp(App());
 }
 
 class App extends StatelessWidget {
-
   final items = List<String>.generate(10000, (i) => "Item $i");
 
   @override
@@ -19,28 +18,24 @@ class App extends StatelessWidget {
         appBar: AppBar(
           centerTitle: false,
           leading: Icon(Icons.videocam),
-          title: const Text(
-              '超かっこいいKBOYのFlutter大学'
-          ),
+          title: const Text('超かっこいいKBOYのFlutter大学'),
           actions: <Widget>[
             SizedBox(
                 width: 44,
                 child: FlatButton(
                   child: Icon(Icons.search),
-                  onPressed: (){
+                  onPressed: () {
                     //todo 検索
                   },
-                )
-            ),
+                )),
             SizedBox(
                 width: 44,
                 child: FlatButton(
                   child: Icon(Icons.more_vert),
-                  onPressed: (){
+                  onPressed: () {
                     //todo 検索
                   },
-                )
-            )
+                ))
           ],
         ),
         body: Container(
@@ -54,29 +49,26 @@ class App extends StatelessWidget {
                       width: 60,
                       height: 60,
                       child: Image.network(
-                          'https://yt3.ggpht.com/a/AATXAJx2LQwh1kNX09biNyCenCNGzh5Rvwoue-an_Q=s48-c-k-c0xffffffff-no-rj-mo'
-                      ),
+                          'https://pbs.twimg.com/media/E7iGC9SUcAkW1mw?format=jpg&name=large'),
                     ),
                     const SizedBox(
                       width: 8,
                     ),
                     Column(
                       children: <Widget>[
-                        const Text(
-                            'KBOYのFlutter大学'
-                        ),
+                        const Text('KBOYのFlutter大学'),
                         FlatButton(
                           child: Row(
                             children: <Widget>[
-                             Icon(
-                               Icons.video_call,
-                               color: Colors.red,
-                             ),
-                             Text('登録する'),
-                           ],
+                              Icon(
+                                Icons.video_call,
+                                color: Colors.red,
+                              ),
+                              Text('登録する'),
+                            ],
                           ),
                           onPressed: () {
-                           //To Do
+                            //To Do
                           },
                         )
                       ],
@@ -86,23 +78,24 @@ class App extends StatelessWidget {
               ),
               Expanded(
                 child: ListView.builder(
-                itemCount: items.length,
-                itemBuilder: (context, index) {
+                  itemCount: items.length,
+                  itemBuilder: (context, index) {
                     return ListTile(
-                      onTap: () async{
+                      onTap: () async {
                         //TODO 画面遷移
                         await Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => VideoDetailPage()),
+                          MaterialPageRoute(
+                              builder: (context) => VideoDetailPage()),
                         );
                       },
                       contentPadding: EdgeInsets.all(8),
                       leading: Image.network(
-                          'https://i.ytimg.com/vi/PXnqg_Ozouk/maxresdefault.jpg'
-                      ),
+                          'https://i.ytimg.com/vi/PXnqg_Ozouk/maxresdefault.jpg'),
                       title: Column(
                         children: <Widget>[
-                          Text('【Flutter超入門】リストを作る方法',
+                          Text(
+                            '【Flutter超入門】リストを作る方法',
                             style: TextStyle(
                               fontWeight: FontWeight.w500,
                             ),
@@ -118,12 +111,9 @@ class App extends StatelessWidget {
                                 style: TextStyle(fontSize: 10),
                               ),
                             ],
-
                           )
                         ],
-
                       ),
-
                     );
                   },
                 ),
