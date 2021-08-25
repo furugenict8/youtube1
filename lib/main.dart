@@ -18,7 +18,7 @@ class App extends StatelessWidget {
         appBar: AppBar(
           centerTitle: false,
           leading: Icon(Icons.videocam),
-          title: const Text('超かっこいいKBOYのFlutter大学'),
+          title: const Text('超いけてるKBOYのFlutter大学'),
           actions: <Widget>[
             SizedBox(
                 width: 44,
