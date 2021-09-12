@@ -79,13 +79,29 @@ class App extends StatelessWidget {
                   Column(
                     children: <Widget>[
                       const Text("KboyのFlutter大学"),
-                      IconButton(
-                        onPressed: () {
-                          //登録画面へ繊維
-                        },
-                        icon:
-                            Icon(Icons.video_call_outlined, color: Colors.blue),
-                      )
+                      TextButton(
+                          onPressed: () {
+                            //登録画面へ飛ぶ
+                          },
+                          child: Row(
+                            children: <Widget>[
+                              Icon(
+                                Icons.video_call_outlined,
+                                color: Colors.blue,
+                              ),
+                              Text("登録する")
+                            ],
+                          ))
+
+                      // IconButton(
+                      //   onPressed: () {
+                      //     //登録画面へ繊維
+                      //   },
+                      //   icon: Icon(
+                      //     Icons.video_call_outlined,
+                      //     color: Colors.blue,
+                      //   ),
+                      // )
                     ],
                   )
                 ],
