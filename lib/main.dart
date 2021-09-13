@@ -107,16 +107,6 @@ class App extends StatelessWidget {
                                     style: TextStyle(color: Colors.black))
                               ],
                             ))
-
-                        // IconButton(
-                        //   onPressed: () {
-                        //     //登録画面へ繊維
-                        //   },
-                        //   icon: Icon(
-                        //     Icons.video_call_outlined,
-                        //     color: Colors.blue,
-                        //   ),
-                        // )
                       ],
                     )
                   ],
