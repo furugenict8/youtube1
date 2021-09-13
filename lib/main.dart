@@ -72,39 +72,47 @@ class App extends StatelessWidget {
         body: Container(
           child: Column(
             children: <Widget>[
-              Row(
-                children: <Widget>[
-                  Image.network(
-                      "https://yt3.ggpht.com/Acyl-4aTTupNoyoxGGRVoC46a-cxqDk1_SC1JiuV-_XeHSeZBZqNJCjLlekP85t7Iw1qqp5aSA=s88-c-k-c0x00ffffff-no-rj"),
-                  Column(
-                    children: <Widget>[
-                      const Text("KboyのFlutter大学"),
-                      TextButton(
-                          onPressed: () {
-                            //登録画面へ飛ぶ
-                          },
-                          child: Row(
-                            children: <Widget>[
-                              Icon(
-                                Icons.video_call_outlined,
-                                color: Colors.blue,
-                              ),
-                              Text("登録する")
-                            ],
-                          ))
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Row(
+                  children: <Widget>[
+                    SizedBox(
+                      width: 80,
+                      height: 80,
+                      child: Image.network(
+                          "https://yt3.ggpht.com/Acyl-4aTTupNoyoxGGRVoC46a-cxqDk1_SC1JiuV-_XeHSeZBZqNJCjLlekP85t7Iw1qqp5aSA=s88-c-k-c0x00ffffff-no-rj"),
+                    ),
+                    const SizedBox(width: 8),
+                    Column(
+                      children: <Widget>[
+                        const Text("KboyのFlutter大学"),
+                        TextButton(
+                            onPressed: () {
+                              //登録画面へ飛ぶ
+                            },
+                            child: Row(
+                              children: <Widget>[
+                                Icon(
+                                  Icons.video_call_outlined,
+                                  color: Colors.blue,
+                                ),
+                                Text("登録する")
+                              ],
+                            ))
 
-                      // IconButton(
-                      //   onPressed: () {
-                      //     //登録画面へ繊維
-                      //   },
-                      //   icon: Icon(
-                      //     Icons.video_call_outlined,
-                      //     color: Colors.blue,
-                      //   ),
-                      // )
-                    ],
-                  )
-                ],
+                        // IconButton(
+                        //   onPressed: () {
+                        //     //登録画面へ繊維
+                        //   },
+                        //   icon: Icon(
+                        //     Icons.video_call_outlined,
+                        //     color: Colors.blue,
+                        //   ),
+                        // )
+                      ],
+                    )
+                  ],
+                ),
               ),
             ],
           ),
