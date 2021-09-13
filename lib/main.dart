@@ -127,7 +127,36 @@ class App extends StatelessWidget {
                   itemCount: items.length,
                   itemBuilder: (context, index) {
                     return ListTile(
-                      title: Text(items[index]),
+                      contentPadding: EdgeInsets.all(8),
+                      leading: Image.network(
+                          "https://i.ytimg.com/vi/PXnqg_Ozouk/hqdefault.jpg?sqp=-oaymwEjCPYBEIoBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAmjUdKEw-jfDH8nwyy3_F1VMXlfw"),
+                      title: Column(
+                        children: [
+                          Text(
+                            '[Flutter大学超入門] リストを作る方法',
+                            style: TextStyle(fontWeight: FontWeight.w700),
+                          ),
+                          Row(
+                            children: <Widget>[
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Text(
+                                  '245回再生',
+                                  style: TextStyle(fontSize: 13),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Text(
+                                  '5日前',
+                                  style: TextStyle(fontSize: 13),
+                                ),
+                              ),
+                            ],
+                          )
+                        ],
+                      ),
+                      trailing: Icon(Icons.more_vert),
                     );
                   },
                 ),
