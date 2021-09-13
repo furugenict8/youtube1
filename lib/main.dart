@@ -96,7 +96,8 @@ class App extends StatelessWidget {
                                   Icons.video_call_outlined,
                                   color: Colors.blue,
                                 ),
-                                Text("登録する")
+                                Text("登録する",
+                                    style: TextStyle(color: Colors.black))
                               ],
                             ))
 
