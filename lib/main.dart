@@ -8,6 +8,9 @@ class App extends StatelessWidget {
   //appBarのaction buttonsのSizedBoxの幅　の変数sizeBoxWidthを作っておく。
   double _sizeBoxWidth = 40;
 
+  //ListViewで使う変数items
+  final items = List<String>.generate(10000, (i) => "Item $i");
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -119,6 +122,16 @@ class App extends StatelessWidget {
                   ],
                 ),
               ),
+              Expanded(
+                child: ListView.builder(
+                  itemCount: items.length,
+                  itemBuilder: (context, index) {
+                    return ListTile(
+                      title: Text(items[index]),
+                    );
+                  },
+                ),
+              )
             ],
           ),
         ),
