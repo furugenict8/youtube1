@@ -85,7 +85,11 @@ class App extends StatelessWidget {
                     const SizedBox(width: 8),
                     Column(
                       children: <Widget>[
-                        const Text("KboyのFlutter大学"),
+                        const Text(
+                          "KboyのFlutter大学",
+                          style: TextStyle(
+                              fontSize: 25, fontWeight: FontWeight.bold),
+                        ),
                         TextButton(
                             onPressed: () {
                               //登録画面へ飛ぶ
