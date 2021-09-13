@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:youtube1app/video_detail_page.dart';
 
 void main() {
   runApp(App()); //App classのインスタンスを引数に動く関数runApp()
@@ -117,11 +118,11 @@ class App extends StatelessWidget {
                   itemCount: items.length,
                   itemBuilder: (context, index) {
                     return ListTile(
-                      onTap: () {
-                        Navigator.push(
+                      onTap: () async {
+                        await Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => SecondRoute()),
+                              builder: (context) => VideoDetailPage()),
                         );
                       },
                       contentPadding: EdgeInsets.all(8),
@@ -160,28 +161,6 @@ class App extends StatelessWidget {
               )
             ],
           ),
-        ),
-      ),
-    );
-  }
-}
-
-class SecondRoute extends StatelessWidget {
-  const SecondRoute({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("遷移先の画面"),
-      ),
-      body: Center(
-        child: TextButton(
-          onPressed: () {
-            // Navigate back to first route when tapped.
-            Navigator.pop(context);
-          },
-          child: Text('戻って！'),
         ),
       ),
     );
