@@ -1,17 +1,23 @@
 import 'package:flutter/material.dart';
 
 class VideoDetailPage extends StatelessWidget {
+  const VideoDetailPage({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: Text("動画詳細"),
+      ),
       body: Center(
-        child: Container(
-          child: Text('動画'),
+        child: ElevatedButton(
+          onPressed: () {
+            // Navigate back to first route when tapped.
+            Navigator.pop(context);
+          },
+          child: Text('戻って'),
         ),
       ),
     );
   }
-
 }

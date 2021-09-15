@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:youtube1app/video_detail_page.dart';
 
 void main() {
   runApp(App()); //App classのインスタンスを引数に動く関数runApp()
@@ -117,6 +118,18 @@ class App extends StatelessWidget {
                   itemCount: items.length,
                   itemBuilder: (context, index) {
                     return ListTile(
+                      //async awaitについて
+                      // 無名関数にasync awaitを使う場合は戻り値の型も書かなくてこういう書き方ができるみたい。
+                      //通常のFunctionなりmethodなりにつけるばあいはFuture<void>を戻り値で指定しないといけいないはず。
+                      //ここではonTap()がされた場合、Navigator.push()処理が終わるまで次の処理にすすまないって意味
+                      onTap: () async {
+                        await Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => VideoDetailPage(),
+                          ),
+                        );
+                      },
                       contentPadding: EdgeInsets.all(8),
                       leading: Image.network(
                           "https://i.ytimg.com/vi/PXnqg_Ozouk/hqdefault.jpg?sqp=-oaymwEjCPYBEIoBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAmjUdKEw-jfDH8nwyy3_F1VMXlfw"),
