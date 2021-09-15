@@ -27,7 +27,7 @@ class MyHomePageState extends State<MyHomePage> {
 
   Future<void> mainLoop() async {
     while (true) {
-      //1秒待つという行為。
+      //1秒待つという行為。Future型なので、非同期処理を戻すメソッド
       //awaitをつけることにより、この処理が終わるまで次の処理には行かない。
       await Future<void>.delayed(const Duration(seconds: 1));
       //StatefulWidgetを使った場合の画面描画する処理。

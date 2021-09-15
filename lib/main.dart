@@ -118,11 +118,16 @@ class App extends StatelessWidget {
                   itemCount: items.length,
                   itemBuilder: (context, index) {
                     return ListTile(
+                      //async awaitについて
+                      // 無名関数にasync awaitを使う場合は戻り値の型も書かなくてこういう書き方ができるみたい。
+                      //通常のFunctionなりmethodなりにつけるばあいはFuture<void>を戻り値で指定しないといけいないはず。
+                      //ここではonTap()がされた場合、Navigator.push()処理が終わるまで次の処理にすすまないって意味
                       onTap: () async {
                         await Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => VideoDetailPage()),
+                            builder: (context) => VideoDetailPage(),
+                          ),
                         );
                       },
                       contentPadding: EdgeInsets.all(8),
